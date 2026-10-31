@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmosphere | Modern Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="weather-container">
+        <h1><i class="fa-solid fa-cloud-sun"></i> Weather App</h1>
+        
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Enter city name...">
+            <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button id="location-btn" title="Use My Current Location"><i class="fa-solid fa-location-crosshairs"></i></button>
+        </div>
+
+        <div id="loading" class="loader hidden">
+            <i class="fa-solid fa-spinner fa-spin"></i> Fetching weather data...
+        </div>
+
+        <div id="error-msg" class="error hidden"></div>
+
+        <div id="weather-card" class="weather-card hidden">
+            <div class="location-details">
+                <h2 id="city-name">--</h2>
+                <span id="current-date">--</span>
+            </div>
+            <div class="forecast-container">
+        <h3>5-Day Forecast</h3>
+             <div id="forecast-grid" class="forecast-grid">
+            <!-- Forecast cards injected via JavaScript -->
+             </div>
+        </div>
+            
+            <div class="weather-main">
+                <div class="temp-box">
+                    <h1 id="temperature">--&deg;C</h1>
+                    <p id="condition">--</p>
+                </div>
+                <div class="icon-box">
+                    <img id="weather-icon" src="" alt="Weather Icon">
+                </div>
+            </div>
+
+            <div class="weather-footer">
+                <div class="info-item">
+                    <i class="fa-solid fa-droplet"></i>
+                    <span>Humidity: <strong id="humidity">--%</strong></span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-wind"></i>
+                    <span>Wind Speed: <strong id="wind-speed">-- km/h</strong></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
